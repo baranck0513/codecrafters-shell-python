@@ -8,12 +8,15 @@ def main():
         if command == "exit 0":
             exit()
 
+        if command in ("echo", "type", "exit"):
+            print(f"{command} is a shell builtin")
+
         if command.startswith("echo "):
-            print(command[5:])
-            continue
+                print(command[5:])
+                continue
         if command == "echo":
-            print("")
-            continue
+                print("")
+                continue
 
         print(f"{command}: command not found")
 
