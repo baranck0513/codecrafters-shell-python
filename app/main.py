@@ -13,7 +13,7 @@ def main():
             if target in ("echo", "type", "exit"):
                 print(f"{target} is a shell builtin")
             else:
-                print(f"{target}: command not found")
+                print(f"{target}: not found")
             continue
 
             
