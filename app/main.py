@@ -19,10 +19,10 @@ def main():
                 continue
             
             if path := shutil.which(target):
-                 print(f"{target} is {path}")
+                print(f"{target} is {path}")
+                continue  
 
-            if not False:
-                print(f"{target}: not found")
+            print(f"{target}: not found")
             continue
 
             
