@@ -12,7 +12,11 @@ def main():
             target = command[5:]
             if target in ("echo", "type", "exit"):
                 print(f"{target} is a shell builtin")
+            else:
+                print(f"{target}: command not found")
             continue
+
+            
 
         if command.startswith("echo "):
                 print(command[5:])
