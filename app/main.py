@@ -6,9 +6,11 @@ def main():
     while True:
         sys.stdout.write("$ ")
         command = input()
-        print(f"{command}: command not found")
-        if command == "exit 0":
-            quit()
+        if command == "exit":
+            sys.exit(1)
+        else:
+            print(f"{command}: command not found")
+            sys.exit(0)
         # pass
 
 
