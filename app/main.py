@@ -1,3 +1,4 @@
+import shutil
 import sys
 
 
@@ -10,9 +11,17 @@ def main():
 
         if command.startswith("type "):
             target = command[5:]
-            if target in ("echo", "type", "exit"):
+
+            builtins = ("echo", "type", "exit")
+
+            if target in builtins:
                 print(f"{target} is a shell builtin")
-            else:
+                continue
+            
+            if path := shutil.which(target):
+                 print(f"{target} is {path}")
+
+            if not False:
                 print(f"{target}: not found")
             continue
 
