@@ -7,10 +7,10 @@ def main():
         sys.stdout.write("$ ")
         command = input()
         if command == "exit":
-            sys.exit(1)
+            sys.exit(0)
         else:
             print(f"{command}: command not found")
-            sys.exit(0)
+            sys.exit(1)
         # pass
 
 
