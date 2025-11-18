@@ -1,4 +1,5 @@
 import shutil
+import subprocess
 import sys
 
 
@@ -33,6 +34,14 @@ def main():
         if command == "echo":
                 print("")
                 continue
+        
+        parts = command.split()
+        prog = parts[0]
+        args = parts
+        
+        if path := shutil.which(prog):
+            subprocess.run(args)
+            continue
 
         print(f"{command}: command not found")
 
