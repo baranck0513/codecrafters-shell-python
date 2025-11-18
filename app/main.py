@@ -10,7 +10,6 @@ def main():
             sys.exit(0)
         else:
             print(f"{command}: command not found")
-            sys.exit(1)
         # pass
 
 
